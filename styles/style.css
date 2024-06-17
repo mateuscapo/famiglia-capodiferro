@@ -1,0 +1,183 @@
+/* CSS Reset by Meyer */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;800&display=swap');
+
+/* Root Parameters */
+:root {
+    --color-main:#0C1844;
+    --color-secondary:#FF6969;
+    --color-terciary:#FFF5E1;
+    --color-quaternary: #C80036;
+    --font-main: "Kanit", sans-serif;;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--color-main);
+}
+
+.header {
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu {
+    display: flex;
+    gap: 60px;
+}
+
+.header__menu__link {
+    font-family: var(--font-main);
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+.header__menu__link:hover {
+    color: var(--color-terciary);
+}
+
+.main {
+    display: flex;
+    flex-direction: space-between;
+    padding: 8% 15% 8% 15%;
+    align-items: center;
+    gap: 150px;
+}
+
+.main__section {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__section__title {
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f6f6f6;
+}
+
+.main__section__title__emphasis {
+    color: #FF6969;
+}
+
+.main__section__phrase {
+    font-family: var(--font-main);
+    color: #f6f6f6;
+    font-size: 1rem;
+}
+
+.main__section__list {
+    padding-left: 03%;
+    font-family: var(--font-main);
+    color: #f6f6f6;
+    font-size: 1rem;
+    gap: 80px;
+}
+
+.main__section__img {
+    max-width: 30%;
+    height: auto;
+    transition: transform .2s;
+}
+
+.main__section__img:hover {
+    transform: scale(1.1);
+}
+
+.main__section__img__2 {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform .2s;
+}
+
+.main__section__img__2:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: var(--color-terciary);
+    align-items: center;
+}
+
+.footer__text {
+    padding: 1.5%;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    color: var(--color-quaternary);
+    text-align: center;
+}
+
+.footer__text__link {
+    color: var(--color-main);
+    text-decoration: none;
+}
+
+.footer__text__link:hover {
+    color: var(--color-secondary);
+}
+
+/* Responsive Parameters */
+
+/* Mobile */
+@media (max-width: 700px) {
+    
+    .header__menu {
+        padding: 05% 0% 0% 20%;
+    }
+
+    .header__menu__link {
+        align-items: auto;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .main__section__img {
+        max-width: 80%;
+    }
+
+    .main__section__img__2 {
+        max-width: 100%;
+    }
+}
+
+/* Tablet */
+@media (min-width:700px) and (max-width: 1200px) {
+
+    .main {
+        gap: 50px;
+    }
+
+    .main__section__img {
+        max-width: 40%;
+    }
+
+    .main__section__img__2 {
+        max-width: 50%;
+    }
+}
